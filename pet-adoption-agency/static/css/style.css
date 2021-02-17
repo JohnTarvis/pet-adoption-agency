@@ -1,0 +1,101 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+*{
+    margin:2px;
+}
+
+#content{
+    display:inline-block;
+    padding:10px;
+    background-color:cornflowerblue;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    text-decoration: none;
+    background-color: #111;
+}
+
+.time-stamp{
+    color:red;
+    display:inline-block;
+}
+
+.time-stamp-container{
+    margin-top:3rem;
+}
+
+.form-button{
+    display:inline-block;
+}
+
+.inline-block{
+    display:inline-block;
+}
+
+.row{
+    text-align:center;
+}
+
+.col{
+    text-align:left;
+}
+
+.pet-avail{
+    text-align:center;
+    color: green;
+}
+
+.card{
+    /* height:500px; */
+    width:20%;
+    display:inline-block;
+}
+
+.card-title{
+    text-align:center;
+}
+
+.centered{
+    text-align:center;
+}
+
+.bordered{
+    border:1px solid black;
+}
+
+.pet-specs{
+    padding:1px;
+    text-align:center;
+}
+
+.pet-image{
+    height:100px;
+}
+
+.img-thumbnail{
+    width:95%;
+}

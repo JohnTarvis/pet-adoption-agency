@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}   
+
+<div id='content' class='centered'>
+
+    <h1>Pets</h1>
+
+        {%for pet in pets%}
+            <div class="card centered">
+        
+                {%if pet.photo_name%}
+                    <img class="card-img-top img-thumbnail"
+                    src="static/images/{{pet.photo_name}}" 
+                    alt="pet image">
+                {% else %}
+                    <img class="card-img-top img-thumbnail"
+                    src="static/images/image_unavailable.png" 
+                    alt='no image available'>
+                {%endif%}
+
+                <div class="card-body">
+                <i><h3 class="card-title">{{pet.name}}</h3></i>
+                <p class="card-text">
+                    <div class='pet-specs'>
+                        <div class='row'>
+                            <div class = 'col'>
+                                <div class='row'>
+                                    Species:
+                                </div>
+                                <div class='row'>
+                                    Age:
+                                </div>
+                            </div>
+                            <div class = 'col'>
+                                <div class='row'>
+                                    {{pet.species}}
+                                </div>
+                                <div class='row'>
+                                    {{pet.age}}
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='centered'>
+                        Notes:
+                    </div>
+                    <div>{{pet.notes}}</div>
+                    {%if pet.available == True %}
+                        <div class='pet-avail'><h5>Available</h5></div>
+                    {%endif%}
+                </p>
+                <a href='/pets/{{pet.id}}/edit' class='btn btn-primary btn-block'>Edit</a>
+                <a href='/pets/{{pet.id}}/delete' class='btn btn-danger btn-block'>Delete</a>
+                </div>
+            </div>  
+            
+        {%endfor%}
+
+    <br>
+
+    <a href='pets/add' class="btn btn-success">Add Pet</a>
+
+</div>
+
+{% endblock %}
